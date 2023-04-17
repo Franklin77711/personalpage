@@ -1,0 +1,17 @@
+@media (min-width: 1300px) { 
+    #welcome-page{
+        h1{
+            margin-top: 0;
+        }
+    }
+    #technologies{
+        margin: 0 10em;
+    }
+}
+@media (max-height: 850px) {
+    #welcome-page{
+        h1{
+            margin-top: 3em;
+        }
+    }
+}

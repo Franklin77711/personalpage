@@ -1,0 +1,83 @@
+@font-face {
+	font-family: Welcome-Header;
+	src: url(../Fonts/HarryP-MVZ6w.ttf);
+}
+
+$default-main:#E4D3A0;
+$default-main-opa:#00000030;
+$default-text:#2A1205;
+$default-button: #410E1A;
+$default-buttonhov: #5C282F;
+
+$gryffindor-main: #740001;
+$gryffindor-main-opa:#ffffff30;
+$gryffindor-text: #eeba30;
+$gryffindor-button: black;
+$gryffindor-buttonhov: #333;
+
+$slytherin-main: #1A472A;
+$slytherin-main-opa:#ffffff30;
+$slytherin-text: #aaaaaa;
+$slytherin-button: black;
+$slytherin-buttonhov: #333;
+
+
+
+$ravenclaw-main: #222f5b;
+$ravenclaw-main-opa:#ffffff30;
+$ravenclaw-text: #946b2d;
+$ravenclaw-button: black;
+$ravenclaw-buttonhov: #333;
+
+
+$hufflepuff-main: #ecb939;
+$hufflepuff-main-opa:#00000030;
+$hufflepuff-text: #372e29;
+$hufflepuff-button: #FFDB00;
+$hufflepuff-buttonhov: #333;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body{
+	overflow-x: hidden;
+}
