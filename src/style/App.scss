@@ -28,8 +28,26 @@
     }
     #portfolio{
       border: 5px solid $default-main-opa;
+      .portfolio-item {
+        .buttons{
+          .link{
+            background-color: $default-button;
+            color: $default-main;
+          }
+          .link:hover{
+            background-color: $default-buttonhov;
+          }
+        }
+     }
     }
     #portfolio::before{
+      background-color: $default-main;
+      color: $default-main-opa;
+    }
+    #about{
+      border: 5px solid $default-main-opa;
+    }
+    #about::before{
       background-color: $default-main;
       color: $default-main-opa;
     }
@@ -53,8 +71,26 @@
   }
   #portfolio{
     border: 5px solid $gryffindor-main-opa;
+    .portfolio-item {
+      .buttons{
+        .link{
+          background-color: $gryffindor-button;
+          color: $gryffindor-text;
+        }
+        .link:hover{
+          background-color: $gryffindor-buttonhov;
+        }
+      }
+   }
   }
   #portfolio::before{
+    background-color: $gryffindor-main;
+    color: $gryffindor-main-opa;
+  }
+  #about{
+    border: 5px solid $gryffindor-main-opa;
+  }
+  #about::before{
     background-color: $gryffindor-main;
     color: $gryffindor-main-opa;
   }
@@ -78,11 +114,29 @@
   }
   #portfolio{
     border: 5px solid $slytherin-main-opa;
+    .portfolio-item {
+      .buttons{
+        .link{
+          background-color: $slytherin-button;
+          color: $slytherin-text;
+        }
+        .link:hover{
+          background-color: $slytherin-buttonhov;
+        }
+      }
+   }
   }
   #portfolio::before{
     background-color: $slytherin-main;
     color: $slytherin-main-opa;
   
+}
+#about{
+  border: 5px solid $slytherin-main-opa;
+}
+#about::before{
+  background-color: $slytherin-main;
+  color: $slytherin-main-opa;
 }
 }
 #ravenclaw{
@@ -104,11 +158,29 @@
   }
   #portfolio{
     border: 5px solid $ravenclaw-main-opa;
+    .portfolio-item {
+      .buttons{
+        .link{
+          background-color: $ravenclaw-button;
+          color: $ravenclaw-text;
+        }
+        .link:hover{
+          background-color: $ravenclaw-buttonhov;
+        }
+      }
+   }
   }
   #portfolio::before{
     background-color: $ravenclaw-main;
     color: $ravenclaw-main-opa;
   
+}
+#about{
+  border: 5px solid $ravenclaw-main-opa;
+}
+#about::before{
+  background-color: $ravenclaw-main;
+  color: $ravenclaw-main-opa;
 }
 }
 #hufflepuff{
@@ -130,8 +202,26 @@
   }
   #portfolio{
     border: 5px solid $hufflepuff-main-opa;
+    .portfolio-item {
+      .buttons{
+        .link{
+          background-color: $hufflepuff-button;
+          color: $hufflepuff-text;
+        }
+        .link:hover{
+          background-color: $hufflepuff-buttonhov;
+        }
+      }
+   }
   }
   #portfolio::before{
+    background-color: $hufflepuff-main;
+    color: $hufflepuff-main-opa;
+  }
+  #about{
+    border: 5px solid $hufflepuff-main-opa;
+  }
+  #about::before{
     background-color: $hufflepuff-main;
     color: $hufflepuff-main-opa;
   }
@@ -268,17 +358,17 @@
       rotate: 90deg;
       left: 36%;
       top: -20%;
-      border-right: 2px solid white;
+      border-right: 5px solid white;
     }
     .right{
       top: 15%;
       left: -14%;
-      border-right: 2px solid white;
+      border-right: 5px solid white;
     }
     .left{
       top: 15%;
       right: -14%;
-      border-left: 2px solid white;
+      border-left: 5px solid white;
     }
     .H{
       position: absolute;
@@ -345,9 +435,68 @@
   position: absolute;
   top: -0.6em;
   left: 5%;
-  font-size: clamp(2em, 2vw ,7.5em);
+  font-size: clamp(2em, 5vw ,7.5em);
 }
 #portfolio{
+  position: relative;
+  margin: 10rem clamp(0.5em, 2vw, 4em);
+  padding: clamp(1em, 3vw, 3em);
+  .portfolio-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin: 5em 0;
+      .portfolio-gif{
+        width: clamp(230px, 30vw ,480px);
+        height: fit-content;
+        object-fit: contain;
+        filter: grayscale(100%);
+        position: relative;
+        transition: filter 1s;
+
+        border: 10px solid;
+        border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+        animation: borderRotate var(--d) linear infinite forwards;
+      }
+      .portfolio-gif:hover{
+        filter: grayscale(0%);
+        transition: filter 1s;
+      }
+      .petiweb-gif:hover{
+        content: url(../images/portfolioGif/petiweb.webp);
+      }
+      .waldo-gif:hover{
+        content: url(../images/portfolioGif/whereiswaldo.webp);
+      }
+      .portfolio-item-summary{
+        .title{
+          font-size: clamp(2em, 3vw ,3em);
+          font-weight: bold;
+          letter-spacing: 3px;
+          margin-bottom: 0.3em;
+        }
+        .description{
+          font-size: clamp(1.3em, 2vw ,2em);
+          font-weight: 500;
+          .not-in-used-text{
+            font-size: smaller;
+            font-style: italic;
+          }
+          }
+        .buttons{
+          display: flex;
+          justify-content: end;
+          margin-top: 1em;
+          .link{
+            margin-right: 2em;
+            padding: 0.5em;
+            font-size: 24px;
+            border-radius: 10%;
+          }
+        }
+      }
+  }
 
 }
 #portfolio::before{
@@ -355,7 +504,34 @@
   position: absolute;
   top: -0.6em;
   left: 5%;
-  font-size: clamp(2em, 2vw ,7.5em);
+  font-size: clamp(2em, 5vw ,7.5em);
+}
+#about{
+  margin: 0 clamp(0.5em, 2vw, 4em);
+  margin-top: 5em;
+  padding: clamp(1em, 3vw, 3em);
+  position: relative;
+  font-size: clamp(1.3em, 2vw ,2em);
+  .spell{
+    position:relative;
+    top: 10px;
+    margin: 10px;
+    font-family: spellFont;
+    letter-spacing: 5px;
+  }
+}
+#about::before{
+  content: "About";
+  position: absolute;
+  top: -0.6em;
+  left: 5%;
+  font-size: clamp(2em, 5vw ,7.5em);
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
 }
 
 

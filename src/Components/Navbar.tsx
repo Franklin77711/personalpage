@@ -1,7 +1,7 @@
-import griff from "../images/griffin.svg"
-import snake from "../images/slyder.svg"
-import raven from "../images/raven.svg"
-import badger from "../images/huffle.svg"
+import griff from "../images/housesSvg/griffin.svg"
+import snake from "../images/housesSvg/slyder.svg"
+import raven from "../images/housesSvg/raven.svg"
+import badger from "../images/housesSvg/huffle.svg"
 import { ThemeContext } from '../Context/theme';
 import React, {useContext } from 'react';
 

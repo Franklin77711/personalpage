@@ -2,6 +2,14 @@
 	font-family: Welcome-Header;
 	src: url(../Fonts/HarryP-MVZ6w.ttf);
 }
+@font-face {
+	font-family: basicFont;
+	src: url(../Fonts/Hpposter-xxDV.ttf);
+}
+@font-face {
+	font-family: spellFont;
+	src: url(../Fonts/RomanceFatalPrima-RAZV.ttf);
+}
 
 $default-main:#E4D3A0;
 $default-main-opa:#00000030;
@@ -34,7 +42,21 @@ $hufflepuff-main: #ecb939;
 $hufflepuff-main-opa:#00000030;
 $hufflepuff-text: #372e29;
 $hufflepuff-button: #FFDB00;
-$hufflepuff-buttonhov: #333;
+$hufflepuff-buttonhov: #FFDB0080;
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 90deg;
+	inherits: true;
+  }
+  :root {
+	  --d: 2500ms;
+	  --angle: 90deg;
+	  --gradX: 100%;
+	  --gradY: 50%;
+	  --c1: rgb(105, 105, 105);
+	  --c2: rgba(0, 0, 0, 0.1);
+  }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -78,6 +100,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a:link {
+	text-decoration: none;
+  }
+  
+  a:visited {
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: none;
+  }
+  
+  a:active {
+	text-decoration: none;
+  }
 html, body{
 	overflow-x: hidden;
+	font-family: basicFont, sans-serif;
 }
