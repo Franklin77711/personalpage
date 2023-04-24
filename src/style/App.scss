@@ -1,7 +1,6 @@
 @import "./index.scss";
 
 
-
 #hogwarts{
     background-color: $default-main;
     color: $default-text;
@@ -41,6 +40,10 @@
      }
     }
     #portfolio::before{
+      background-color: $default-main;
+      color: $default-main-opa;
+    }
+    #portfolio::after{
       background-color: $default-main;
       color: $default-main-opa;
     }
@@ -87,6 +90,10 @@
     background-color: $gryffindor-main;
     color: $gryffindor-main-opa;
   }
+  #portfolio::after{
+    background-color: $gryffindor-main;
+    color: $gryffindor-main-opa;
+  }
   #about{
     border: 5px solid $gryffindor-main-opa;
   }
@@ -129,7 +136,10 @@
   #portfolio::before{
     background-color: $slytherin-main;
     color: $slytherin-main-opa;
-  
+}
+#portfolio::after{
+  background-color: $slytherin-main;
+  color: $slytherin-main-opa;
 }
 #about{
   border: 5px solid $slytherin-main-opa;
@@ -173,8 +183,12 @@
   #portfolio::before{
     background-color: $ravenclaw-main;
     color: $ravenclaw-main-opa;
+  }
+  #portfolio::after{
+      background-color: $ravenclaw-main;
+      color: $ravenclaw-main-opa;
+  }
   
-}
 #about{
   border: 5px solid $ravenclaw-main-opa;
 }
@@ -215,6 +229,10 @@
    }
   }
   #portfolio::before{
+    background-color: $hufflepuff-main;
+    color: $hufflepuff-main-opa;
+  }
+  #portfolio::after{
     background-color: $hufflepuff-main;
     color: $hufflepuff-main-opa;
   }
@@ -460,14 +478,22 @@
         animation: borderRotate var(--d) linear infinite forwards;
       }
       .portfolio-gif:hover{
+        width: clamp(230px, 30vw ,480px);
         filter: grayscale(0%);
         transition: filter 1s;
+        animation-play-state: paused;
       }
       .petiweb-gif:hover{
         content: url(../images/portfolioGif/petiweb.webp);
       }
       .waldo-gif:hover{
         content: url(../images/portfolioGif/whereiswaldo.webp);
+      }
+      .shop-gif:hover{
+        content: url(../images/portfolioGif/webshop.webp);
+      }
+      .library-gif:hover{
+        content: url(../images/portfolioGif/library.webp);
       }
       .portfolio-item-summary{
         .title{
@@ -486,7 +512,7 @@
           }
         .buttons{
           display: flex;
-          justify-content: end;
+          justify-content: flex-end;
           margin-top: 1em;
           .link{
             margin-right: 2em;
@@ -506,9 +532,15 @@
   left: 5%;
   font-size: clamp(2em, 5vw ,7.5em);
 }
+#portfolio::after{
+  content: "More project on my GitHub.";
+  position: absolute;
+  bottom: -0.4em;
+  right: 5%;
+  font-size: clamp(1em, 2vw ,3em);
+}
 #about{
-  margin: 0 clamp(0.5em, 2vw, 4em);
-  margin-top: 5em;
+  margin: 5em clamp(0.5em, 2vw, 4em);
   padding: clamp(1em, 3vw, 3em);
   position: relative;
   font-size: clamp(1.3em, 2vw ,2em);
@@ -526,6 +558,164 @@
   top: -0.6em;
   left: 5%;
   font-size: clamp(2em, 5vw ,7.5em);
+}
+#footer{
+  position: relative;
+  .footer-svg{
+    position: relative;
+    top: 10px;
+    
+  }
+  .footer-content{
+    background-color: black;
+    width: 100%;
+    position: relative;
+    padding-bottom: 7em;
+
+    .footer-title{
+      padding-top: 3em;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .title-lock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .lock-img{
+          margin: 2em;
+          width: clamp(2em, 10vw, 5em);
+          cursor: pointer;
+        }
+        .shake{
+          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        }
+      }
+      .contact-img{
+        width: clamp(2em, 10vw, 5em);
+      }
+      .restricted{
+        font-size: clamp(2em, 5vw ,7.5em);
+        color: white;
+      }
+    }
+    .secret-input{
+      text-align: center;
+      width: 10em;
+      padding: 0.5em;
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -80%);
+      font-size: x-large;
+      letter-spacing: 0.5em;
+      background-color: transparent;
+      color: white;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      font-family: spellFont;
+      font-weight: bold;
+
+    }
+    .secret-input:focus{
+      outline: none;
+      border-bottom: 3px solid white;
+    }
+  }
+  #secret-tip{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    background-color: rgba(162, 162, 162, 0.70);
+    color: white;
+    text-align: center;
+    border-radius: 30%;
+    padding: 0.5em;
+    margin: 0em;
+    font-size: clamp(2em, 5vw ,7.5em);
+    line-height: 1.5em;
+    font-family: spellFont;
+    animation: invis 3s linear;
+  }
+}
+
+#secret{ 
+  overflow: hidden;
+  padding: clamp(1em, 3vw, 3em);
+  background-color: black;
+  color: white;
+  font-family: boba;
+  opacity: 1;
+  h3{
+    font-size: clamp(2em, 5vw ,7.5em);
+    margin-bottom: 0.5em;
+    animation: secretTitle 2s linear;
+  }
+  #secret-welcome{
+   font-size: 1.5em;
+  }
+  p{
+    line-height: 1.2em;
+    font-size:clamp(0.8em, 2vw ,2em);
+    animation: secretPara 3s linear;
+  }
+
+}
+
+@keyframes secretTitle{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes secretPara{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes invis{
+  0%, 100%{
+    opacity: 0;
+  }
+  25%, 75%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 @keyframes borderRotate {

@@ -7,13 +7,27 @@
     #technologies{
         margin: 0 10em;
     }
+    #footer{
+        position: relative;
+        .footer-content{
+          .secret-input{
+            text-align: center;
+            width: 20svw;
+            padding: 0.5em;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -80%);
+          }
+        }
+      }
 }
 @media (min-width: 1000px) { 
     #portfolio{
         .portfolio-item{
             display: flex;
             flex-direction: row;
-            align-items: start;
+            align-items: flex-start;
             gap: 1em;
         }
     }

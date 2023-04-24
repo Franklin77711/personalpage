@@ -10,6 +10,10 @@
 	font-family: spellFont;
 	src: url(../Fonts/RomanceFatalPrima-RAZV.ttf);
 }
+@font-face {
+	font-family: boba;
+	src: url(../Fonts/BobaMilky-BW49G.ttf);
+}
 
 $default-main:#E4D3A0;
 $default-main-opa:#00000030;
@@ -119,3 +123,5 @@ html, body{
 	overflow-x: hidden;
 	font-family: basicFont, sans-serif;
 }
+
+  
