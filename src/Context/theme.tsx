@@ -1,4 +1,4 @@
-import React, {createContext, useState, PropsWithChildren} from "react";
+import React, {createContext, useState, PropsWithChildren, useEffect} from "react";
 
 interface ThemeContextProps {
   theme: string;
@@ -13,7 +13,9 @@ export const ThemeContext = createContext<ThemeContextProps>({
 export const ThemeProvider: React.FC<PropsWithChildren<{}>> = ({
     children,
   }: PropsWithChildren<{}>) => {
-    const [theme, setTheme] = useState<string>('hogwarts');
+    const [theme, setTheme] = useState<string>('');
+
+  
 
     return <ThemeContext.Provider value={{theme, setTheme}}>
         {children}

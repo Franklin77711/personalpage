@@ -15,8 +15,7 @@
       background-color: $default-main;
     }
     .theme-selector-title{
-      background-color: $default-button;
-      color: $default-main;
+      color: $default-text;
     }
     #technologies{
       border: 5px solid $default-main-opa;
@@ -62,7 +61,6 @@
     background-color: $gryffindor-main;
   }
   .theme-selector-title{
-    background-color: $gryffindor-button;
     color: $gryffindor-text;
   }
   #technologies{
@@ -109,7 +107,6 @@
     background-color: $slytherin-main;
   }
   .theme-selector-title{
-    background-color: $slytherin-button;
     color: $slytherin-text;
   }
   #technologies{
@@ -156,7 +153,6 @@
     background-color: $ravenclaw-main;
   }
   .theme-selector-title{
-    background-color: $ravenclaw-button;
     color: $ravenclaw-text;
   }
   #technologies{
@@ -204,7 +200,6 @@
     background-color: $hufflepuff-main;
   }
   .theme-selector-title{
-    background-color: $hufflepuff-button;
     color: $hufflepuff-text;
   }
   #technologies{
@@ -257,9 +252,40 @@
         font-size: clamp(4em, 10vw ,15em);
         margin-bottom: 0.1em;
     }
+    h1 span:nth-child(1){
+      animation: secretPara 1s linear;
+    }
+    h1 span:nth-child(2){
+      animation: secretPara 2.4s linear;
+    }
+    h1 span:nth-child(3){
+      animation: secretPara 3.1s linear;
+    }
+    h1 span:nth-child(4){
+      animation: secretPara 1.7s linear;
+    }
+    h1 span:nth-child(6){
+      animation: secretPara 1s linear;
+    }
+    h1 span:nth-child(7){
+      animation: secretPara 4s linear;
+    }
+    h1 span:nth-child(8){
+      animation: secretPara 3.5s linear;
+    }
+    h1 span:nth-child(9){
+      animation: secretPara 1.7s linear;
+    }
+    h1 span:nth-child(10){
+      animation: secretPara 2.4s linear;
+    }
+    h1 span:nth-child(11){
+      animation: secretPara 3.1s linear;
+    }
     h2{
         font-family: Welcome-Header, sans-serif;
         font-size: clamp(2em, 5vw ,7.5em);
+        animation: secretPara 5s ease-out;
     }
 }
 #navbar{
@@ -722,6 +748,7 @@
 		--angle: 420deg;
 	}
 }
+
 
 
 

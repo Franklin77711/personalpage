@@ -24,6 +24,7 @@ function App() {
   const [secretText, setSecretText] = useState<string>('');
   const [renderSecret, setRenderSecret] = useState<boolean>(false);
   const secretRef = useRef<HTMLDivElement>(null);
+  const isMounted = useRef<boolean>(false);
   const [showTip, setShowTip] = useState<boolean>(false);
   const [shake, setShake] = useState<boolean>(false);
 
@@ -34,6 +35,25 @@ function App() {
     setShowTip(true);
     setShake(true)
   }
+
+  useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true;
+      const savedTheme:string|null = localStorage.getItem('theme');
+      if(savedTheme){
+        setTheme(savedTheme);
+      }else{
+        setTheme('hogwarts');
+        localStorage.setItem('theme', 'hogwarts')
+      }
+    } else {
+    localStorage.setItem('theme', theme);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   useEffect(()=>{
     if (secretText === "alohomora"){
@@ -65,7 +85,19 @@ function App() {
       <Navbar/>
       <div id='welcome-page'>
         <div id='header-content'>
-          <h1>Nagy Robert</h1>
+          <h1> 
+            <span>N</span>
+            <span>a</span>
+            <span>g</span>
+            <span>y</span>
+            <span> </span>
+            <span>R</span>
+            <span>o</span>
+            <span>b</span>
+            <span>e</span>
+            <span>r</span>
+            <span>t</span>
+          </h1>
           <h2>Front-End Developer</h2>
         </div>
       </div>
