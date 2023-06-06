@@ -12,11 +12,11 @@ import node from "../images/skillSvg/nodejs.svg"
 import petiwebIndex from "../images/indexPic/index-Peti.png"
 import waldoIndex from "../images/indexPic/waldo.png"
 import shopIndex from "../images/indexPic/webshop.png"
-import libraryIndex from "../images/indexPic/library.png"
+import pennyPalIndex from "../images/indexPic/pennypal.png"; 
 import linkedin from "../images/contactsvg/linkedin.svg"
 import github from "../images/contactsvg/gitub.svg"
 import lock from "../images/contactsvg/lock.svg"
-
+import { Slide } from 'react-awesome-reveal';
 
 
 function App() {
@@ -109,20 +109,28 @@ function App() {
         <div className='badge'><img src={node} alt="nodejs logo" className='tech-logo'/></div>
       </div>
       <div id='portfolio'>
-        <div className='portfolio-item petiweb'>
-          <img src={petiwebIndex} className='portfolio-gif petiweb-gif' alt='index for my Photographer Portfolio Website'/>
+      <div className='portfolio-item library'>
+        <Slide direction='left'>
+          <img src={pennyPalIndex} className='portfolio-gif wallet-gif' alt='index for my PennyPal Wallet' />
+          </Slide>
+          <Slide direction='right'>
           <div className='portfolio-item-summary'>
-              <div className='title'>Photographer Portfolio Website</div>
-              <div className='description'>In this project I've created a portolio website for a photographer.
-                The page was only made with HTML, Sass and JS. You can view the  creator's videos and pictures and send him an email to contact him.
-                <span className='not-in-used-text'>There is no code provided to this project beacuse the website is currently in use.</span></div>
+              <div className='title'>PennyPal Wallet</div>
+              <div className='description'>This React project uses firebase for authentication and for database.
+                                           You can add/remove money and keep track how much you earn and spend. All of the data is stored in firebase
+                                           Every user only can change or see his account detail </div>
               <div className='buttons'>
-                <a href='https://peti-web-b1666.web.app/' target='_blank' className='preview link' rel='noreferrer'>Demo</a>
+                <a href='https://github.com/Franklin77711/moneytracks' target='_blank' className='code link' rel='noreferrer'>Code</a>
+                <a href='https://moneytrack-71036.web.app/' target='_blank' className='preview link' rel='noreferrer'>Demo</a>
               </div>
           </div>
+          </Slide>
         </div>
         <div className='portfolio-item waldo'>
+        <Slide direction='left'>
           <img src={waldoIndex} className='portfolio-gif waldo-gif' alt='index for my Where is Waldo App'/>
+        </Slide>
+        <Slide direction='right'>
           <div className='portfolio-item-summary'>
               <div className='title'>Where is Waldo App</div>
               <div className='description'>This game is based on Where is Waldo but here insted of Waldo you have to find three different character.
@@ -133,9 +141,30 @@ function App() {
                 <a href='https://where-is-waldoapp.web.app/' target='_blank' className='preview link' rel='noreferrer'>Demo</a>
               </div>
           </div>
+          </Slide>
         </div>
+        <div className='portfolio-item petiweb'>
+          <Slide direction='left'>
+            <img src={petiwebIndex} className='portfolio-gif petiweb-gif' alt='index for my Photographer Portfolio Website'/>
+          </Slide>
+          <Slide direction='right'>
+          <div className='portfolio-item-summary'>
+              <div className='title'>Photographer Portfolio Website</div>
+              <div className='description'>In this project I've created a portolio website for a photographer.
+                The page was only made with HTML, Sass and JS. You can view the  creator's videos and pictures and send him an email to contact him.
+                <span className='not-in-used-text'>There is no code provided to this project beacuse the website is currently in use.</span></div>
+              <div className='buttons'>
+                <a href='https://peti-web-b1666.web.app/' target='_blank' className='preview link' rel='noreferrer'>Demo</a>
+              </div>
+          </div>
+          </Slide>
+        </div>
+
          <div className='portfolio-item shop'>
+         <Slide direction='left'>
           <img src={shopIndex} className='portfolio-gif shop-gif' alt='index for my E-Commerce Site'/>
+          </Slide>
+          <Slide direction='right'>
           <div className='portfolio-item-summary'>
               <div className='title'>E-Commerce Site</div>
               <div className='description'>This webshop page was made in React. You can add items to the cart, remove them and muliply them.
@@ -146,19 +175,7 @@ function App() {
                 <a href='https://franklin77711.github.io/shopping-cart/' target='_blank' className='preview link' rel='noreferrer'>Demo</a>
               </div>
           </div>
-        </div>
-        <div className='portfolio-item library'>
-          <img src={libraryIndex} className='portfolio-gif library-gif' alt='index for my Trophy Library' />
-          <div className='portfolio-item-summary'>
-              <div className='title'>Trophy Library</div>
-              <div className='description'>My goal in this project was to learn how arrays work. It was made in vanilla JS.
-                                           You can add games with any name with any hours with a difficulty between zero and ten. Your games are stored in localstorage.
-                                           You can not add two games with the same name. You can modify the existing games or remove them.</div>
-              <div className='buttons'>
-                <a href='https://github.com/Franklin77711/library' target='_blank' className='code link' rel='noreferrer'>Code</a>
-                <a href='https://franklin77711.github.io/library/' target='_blank' className='preview link' rel='noreferrer'>Demo</a>
-              </div>
-          </div>
+          </Slide>
         </div>
       </div>
     <div id="about">

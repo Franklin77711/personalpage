@@ -477,7 +477,7 @@
   }
 }
 #technologies::before{
-  content: "Skills";
+  content: "Tech Stack";
   position: absolute;
   top: -0.6em;
   left: 5%;
@@ -520,8 +520,8 @@
       .shop-gif:hover{
         content: url(../images/portfolioGif/webshop.webp);
       }
-      .library-gif:hover{
-        content: url(../images/portfolioGif/library.webp);
+      .wallet-gif:hover{
+        content: url(../images/portfolioGif/pennypal.gif);
       }
       .portfolio-item-summary{
         .title{
